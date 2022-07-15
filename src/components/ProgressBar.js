@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from '../styles/ProgressBar.module.css';
 import Button from './Button';
+import { Link } from 'react-router-dom';
+
 const ProgressBar = () => {
 	return (
 		<div className={classes.progressBar}>
@@ -16,7 +18,7 @@ const ProgressBar = () => {
 					></div>
 				</div>
 			</div>
-			<a href='result.html'>
+			<Link to='/result'>
 				<Button className={classes.next}>
 					{' '}
 					<span>Next Question</span>
@@ -25,7 +27,7 @@ const ProgressBar = () => {
 						arrow_forward{' '}
 					</span>
 				</Button>
-			</a>
+			</Link>
 		</div>
 	);
 };
