@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Form from './Form';
 import TextInput from './TextInput';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
 	return (
@@ -22,7 +23,7 @@ const LoginForm = () => {
 					<span>Submit now</span>
 				</Button>
 				<div class='info'>
-					Don't have an account? <a href='signup.html'>Signup</a>{' '}
+					Don't have an account? <Link to='/signup'>Signup</Link>{' '}
 					instead.
 				</div>
 			</Form>
