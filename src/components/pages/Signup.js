@@ -1,10 +1,10 @@
 import React from 'react';
-import Form from './Form';
-import Illustration from './Illustration';
-import classes from '../styles/Signup.module.css';
-import TextInput from './TextInput';
-import Checkbox from './Checkbox';
-import Button from './Button';
+import Form from '../Form';
+import Illustration from '../Illustration';
+import classes from '../../styles/Signup.module.css';
+import TextInput from '../TextInput';
+import Checkbox from '../Checkbox';
+import Button from '../Button';
 
 const Signup = () => {
 	return (
@@ -40,7 +40,9 @@ const Signup = () => {
 						icon='lock_clock'
 					/>
 					<Checkbox text='I agree to the Terms & Conditions' />
-					<Button>Submit now</Button>
+					<Button>
+						<span>Submit now</span>
+					</Button>
 					<div className='info'>
 						Already have an account? <a href='login.html'>Login </a>
 						instead.
