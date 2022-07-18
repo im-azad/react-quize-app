@@ -9,7 +9,7 @@ import {
 } from 'firebase/database';
 import { useEffect, useState } from 'react';
 
-const useVideoList = (page) => {
+export default function useVideoList(page) {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(false);
 	const [videos, setVideos] = useState([]);
@@ -59,6 +59,4 @@ const useVideoList = (page) => {
 		videos,
 		hasMore,
 	};
-};
-
-export default useVideoList;
+}

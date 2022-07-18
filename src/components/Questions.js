@@ -1,7 +1,7 @@
 import React from 'react';
 import Answers from './Answers';
 import classes from '../styles/Question.module.css';
-const Question = () => {
+const Questions = () => {
 	return (
 		<div>
 			<div className={classes.question}>
@@ -19,4 +19,4 @@ const Question = () => {
 	);
 };
 
-export default Question;
+export default Questions;

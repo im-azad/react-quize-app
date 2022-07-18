@@ -6,6 +6,7 @@ import useVideoList from '../hooks/useVideoList';
 const Videos = () => {
 	const [page, setPage] = useState(1);
 	const { loading, error, videos, hasMore } = useVideoList(page);
+
 	return (
 		<div>
 			{videos.length > 0 && (
@@ -18,8 +19,12 @@ const Videos = () => {
 					{videos.map((video) =>
 						video.noq > 0 ? (
 							<Link
-								to={`/quiz/${video.youtubeID}`}
-								key={video.youtubeID}
+								to={{
+									pathname: `/quiz/${video.youtubeID}`,
+									state: {
+										videoTitle: video.title,
+									},
+								}}
 							>
 								<Video
 									title={video.title}
