@@ -2,7 +2,6 @@ import React, { useEffect, useReducer, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useQuestions from '../../hooks/useQuestions';
 import Answers from '../Answers';
-import MiniPlayer from '../MiniPlayer';
 import ProgressBar from '../ProgressBar';
 import _ from 'lodash';
 import { getDatabase, ref, set } from 'firebase/database';
@@ -105,7 +104,6 @@ const Quiz = () => {
 						submit={submit}
 						progress={percentage}
 					/>
-					<MiniPlayer />
 				</>
 			)}
 		</>
