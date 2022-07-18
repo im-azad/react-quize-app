@@ -11,7 +11,6 @@ const Result = () => {
 	const location = useLocation();
 	const { state } = location;
 	const [qna] = state;
-	console.log(qna);
 
 	const { loading, error, answers } = useAnswers(id);
 
@@ -23,13 +22,16 @@ const Result = () => {
 				checkedIndexes = [];
 
 			question.options.forEach((option, index2) => {
-				if (option.correct) correctIndexes.push(index2);
-				// console.log(qna[index1].options[index2].checked);
-				// if (qna[index1].options[index2].checked) {
-				// 	checkedIndexes.push(index2);
-				// 	option.checked = true;
-				// }
+				if (option.correct) correctIndexes.push(index2); // true / false
+
+				if (qna[index1].options[index2].checked) {
+					checkedIndexes.push(index2);
+					option.checked = true;
+				}
 			});
+
+			console.log(correctIndexes);
+			console.log(checkedIndexes);
 
 			if (_.isEqual(correctIndexes, checkedIndexes)) {
 				score = score + 5;

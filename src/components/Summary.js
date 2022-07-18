@@ -8,7 +8,7 @@ const Summary = ({ score, noq }) => {
 			<div className={classes.point}>
 				<p className={classes.score}>
 					Your score is <br />
-					{score} out of 1{noq * 5}
+					{score} out of {noq * 5}
 				</p>
 			</div>
 
