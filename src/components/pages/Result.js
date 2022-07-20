@@ -30,9 +30,6 @@ const Result = () => {
 				}
 			});
 
-			console.log(correctIndexes);
-			console.log(checkedIndexes);
-
 			if (_.isEqual(correctIndexes, checkedIndexes)) {
 				score = score + 5;
 			}
